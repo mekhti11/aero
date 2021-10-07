@@ -1,17 +1,21 @@
 package com.hititcs.dcs.view.barcode;
 
+import com.hititcs.dcs.di.scope.ScanBarcodeScope;
 import com.hititcs.dcs.domain.interactor.boarding.ScanBarcodeUseCase;
 import com.hititcs.dcs.domain.model.BoardWithBarcodeRequest;
 import com.hititcs.dcs.domain.model.BoardingResponse;
 import com.hititcs.dcs.subscriber.SingleSubscriber;
 import com.hititcs.dcs.util.MessageUtils;
 import com.hititcs.dcs.view.barcode.ScanBarcodeFragment.ResponseListener;
+import javax.inject.Inject;
 
+@ScanBarcodeScope
 public class ScanBarcodePresenterImpl implements ScanBarcodePresenter {
 
   private ScanBarcodeView scanBarcodeView;
   private final ScanBarcodeUseCase scanBarcodeUseCase;
 
+  @Inject
   public ScanBarcodePresenterImpl(ScanBarcodeView scanBarcodeView, ScanBarcodeUseCase scanBarcodeUseCase) {
     this.scanBarcodeView = scanBarcodeView;
     this.scanBarcodeUseCase = scanBarcodeUseCase;

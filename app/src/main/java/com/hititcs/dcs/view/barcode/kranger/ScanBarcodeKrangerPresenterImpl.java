@@ -1,17 +1,21 @@
 package com.hititcs.dcs.view.barcode.kranger;
 
+import com.hititcs.dcs.di.scope.ScanBarcodeScope;
 import com.hititcs.dcs.domain.interactor.boarding.ScanBarcodeUseCase;
 import com.hititcs.dcs.domain.model.BoardWithBarcodeRequest;
 import com.hititcs.dcs.domain.model.BoardingResponse;
 import com.hititcs.dcs.subscriber.SingleSubscriber;
 import com.hititcs.dcs.util.MessageUtils;
+import javax.inject.Inject;
 
+@ScanBarcodeScope
 public class ScanBarcodeKrangerPresenterImpl
     implements ScanBarcodeKrangerContract.ScanBarcodeKrangerPresenter {
 
   private final ScanBarcodeUseCase scanBarcodeUseCase;
   private ScanBarcodeKrangerContract.ScanBarcodeKrangerView scanBarcodeKrangerView;
 
+  @Inject
   public ScanBarcodeKrangerPresenterImpl(
       ScanBarcodeKrangerContract.ScanBarcodeKrangerView scanBarcodeKrangerView,
       ScanBarcodeUseCase scanBarcodeUseCase) {

@@ -447,7 +447,6 @@ class BaggageTrackScanZebraFragment : BaseFragment<BaggageTrackScanZebraFragment
       val scanData = scanDataCollection.scanData
       for (data in scanData) {
         if (!TextUtils.isEmpty(data.data)) {
-          Timber.e("<font color='gray'>" + data.labelType + "</font> : " + data.data)
           presenter.scanBaggageBarcode(locationName!!, locationCode!!, data.data.takeLast(6))
           break
         }
