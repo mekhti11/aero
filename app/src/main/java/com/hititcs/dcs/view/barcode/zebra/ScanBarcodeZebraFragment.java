@@ -154,16 +154,6 @@ public class ScanBarcodeZebraFragment extends BaseFragment<ScanBarcodeZebraFragm
   }
 
   @Override
-  public void showLoading() {
-
-  }
-
-  @Override
-  public void hideLoading() {
-
-  }
-
-  @Override
   public void showError(String message) {
 
   }

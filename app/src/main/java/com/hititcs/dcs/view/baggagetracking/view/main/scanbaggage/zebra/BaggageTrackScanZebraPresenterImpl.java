@@ -22,19 +22,16 @@ public class BaggageTrackScanZebraPresenterImpl
 
   @Override
   public void scanBaggageBarcode(String locationName, String locationCode, String barcodeTagNo) {
-    view.showProgressDialog();
     ScanBaggageRequest request = new ScanBaggageRequest();
     request.setLocationCode(locationCode);
     request.setLocationName(locationName);
     request.setTagNo(barcodeTagNo);
     scanBaggageBarcodeUseCase.execute(new SingleSubscriber<ScanBaggageOutputDto>(this) {
       @Override public void onResponse(ScanBaggageOutputDto data) {
-        view.hideProgressDialog();
         view.scannedBaggageTag(barcodeTagNo, true, null);
       }
 
       @Override public void onError(Throwable e) {
-        view.hideProgressDialog();
         view.scannedBaggageTag(barcodeTagNo, false, super.getErrorMessage(e));
       }
     }, request);
