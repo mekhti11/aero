@@ -21,6 +21,14 @@ public class LoginRemoteDataStore implements LoginDataStore {
     return loginRemote.login(loginRequest);
   }
 
+  @Override public Completable saveUsernameToCache(String username) {
+    return null;
+  }
+
+  @Override public Single<String> getUsernameFromCache() {
+    return null;
+  }
+
   @Override
   public Completable saveAuth(AuthModel authModel) {
     throw new UnsupportedOperationException();

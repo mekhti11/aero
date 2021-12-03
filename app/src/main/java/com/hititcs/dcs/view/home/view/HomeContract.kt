@@ -5,10 +5,10 @@ import com.hititcs.dcs.view.LoadView
 
 interface HomeContract {
   interface HomePresenter : LoadPresenter<HomeView> {
-
+    fun getUsername()
   }
 
   interface HomeView : LoadView {
-
+    fun showUsername(username: String)
   }
 }

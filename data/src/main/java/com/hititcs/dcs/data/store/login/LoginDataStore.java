@@ -9,6 +9,10 @@ public interface LoginDataStore {
 
   Single<AuthModel> login(LoginRequest loginRequest);
 
+  Completable saveUsernameToCache(String username);
+
+  Single<String> getUsernameFromCache();
+
   Completable saveAuth(AuthModel authModel);
 
   Completable clear();

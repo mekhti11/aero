@@ -21,6 +21,14 @@ public class LoginCacheDataStore implements LoginDataStore {
     return loginCache.login(loginRequest);
   }
 
+  @Override public Completable saveUsernameToCache(String username) {
+    return loginCache.saveUsernameToCache(username);
+  }
+
+  @Override public Single<String> getUsernameFromCache() {
+    return loginCache.getUsernameFromCache();
+  }
+
   @Override
   public Completable saveAuth(AuthModel authModel) {
     return loginCache.saveAuth(authModel);

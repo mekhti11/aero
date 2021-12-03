@@ -6,10 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
+import android.widget.TextView
+import butterknife.BindView
 import butterknife.OnClick
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.hititcs.dcs.R
 import com.hititcs.dcs.util.FragmentUtils
+import com.hititcs.dcs.util.StringUtils
 import com.hititcs.dcs.view.BaseActivity
 import com.hititcs.dcs.view.BaseFragment
 import com.hititcs.dcs.view.Presenter
@@ -19,6 +22,8 @@ import com.hititcs.dcs.view.settings.SettingsFragment
 import javax.inject.Inject
 
 class HomeFragment : BaseFragment<HomeFragment>(), HomeContract.HomeView {
+
+  @BindView(R.id.tv_user_name) lateinit var tvUsername: TextView
 
   @Inject lateinit var presenter: HomeContract.HomePresenter
 
@@ -30,6 +35,17 @@ class HomeFragment : BaseFragment<HomeFragment>(), HomeContract.HomeView {
     val fragmentView = inflater.inflate(R.layout.content_home, container, false)
     bindView(fragmentView)
     return fragmentView
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+    presenter.getUsername()
+  }
+
+  override fun showUsername(username: String) {
+    if (!StringUtils.isEmpty(username)) {
+      tvUsername.text = username
+    }
   }
 
   @OnClick(R.id.rlt_home_flights)

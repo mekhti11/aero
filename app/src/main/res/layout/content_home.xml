@@ -47,11 +47,11 @@
               android:id="@+id/tv_user_name"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:textColor="@color/text_color_secondary"
-              android:text="User"
               android:includeFontPadding="false"
-              style="@style/AppTextStyle.Bold"
+              android:text="User"
+              android:textColor="@color/text_color_secondary"
               android:textSize="@dimen/text_size_xxxxlarge"
+              style="@style/AppTextStyle.Bold"
               />
 
           <androidx.appcompat.widget.AppCompatImageView
@@ -145,7 +145,7 @@
               >
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/iv_flight"
+                android:id="@+id/iv_change_baggage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_baggage_tracking"
@@ -156,7 +156,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/iv_flight"
+                android:layout_toEndOf="@+id/iv_change_baggage"
                 android:layout_centerVertical="true"
                 style="@style/AppTextStyle.Bold"
                 android:layout_marginStart="@dimen/spacing_sxlarge"

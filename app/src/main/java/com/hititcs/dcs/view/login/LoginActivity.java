@@ -24,6 +24,7 @@ import com.google.firebase.storage.StorageReference;
 import com.hititcs.dcs.R;
 import com.hititcs.dcs.domain.interactor.airline.GetCompaniesUseCase;
 import com.hititcs.dcs.domain.interactor.login.LoginUseCase;
+import com.hititcs.dcs.domain.interactor.login.SaveUsernameUseCase;
 import com.hititcs.dcs.domain.model.Airline;
 import com.hititcs.dcs.domain.model.AirlineListResponse;
 import com.hititcs.dcs.domain.model.AuthModel;
@@ -64,6 +65,8 @@ public class LoginActivity extends BaseActivity<LoginActivity> {
 
   @Inject
   LoginUseCase loginUseCase;
+  @Inject
+  SaveUsernameUseCase saveUsernameUseCase;
   @Inject
   GetCompaniesUseCase getCompaniesUseCase;
 
@@ -162,7 +165,7 @@ public class LoginActivity extends BaseActivity<LoginActivity> {
     File finalLocalFile = localFile;
     tempStorageReference.getFile(localFile).addOnSuccessListener(uri -> {
       hideProgressDialog();
-      jump();
+      saveUsernameToCacheAndJump();
     }).addOnFailureListener(
         e -> {
           Timber.e("Error getting companyLogo from firebase");
@@ -226,6 +229,27 @@ public class LoginActivity extends BaseActivity<LoginActivity> {
     if (compositeDisposable != null) {
       compositeDisposable.dispose();
     }
+  }
+
+  private void saveUsernameToCacheAndJump() {
+    this.showProgressDialog();
+    saveUsernameUseCase.execute(new SingleObserver<Boolean>() {
+      @Override
+      public void onSubscribe(Disposable d) {
+        compositeDisposable.add(d);
+      }
+
+      @Override
+      public void onSuccess(Boolean data) {
+        hideProgressDialog();
+        jump();
+      }
+
+      @Override
+      public void onError(Throwable e) {
+        hideProgressDialog();
+      }
+    }, twUsername.getText().toString());
   }
 
   private void jump() {

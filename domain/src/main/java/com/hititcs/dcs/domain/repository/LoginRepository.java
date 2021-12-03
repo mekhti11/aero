@@ -9,8 +9,11 @@ public interface LoginRepository {
 
   Single<AuthModel> login(LoginRequest loginRequest);
 
+  Single<Boolean> saveUsernameToCache(String username);
+
+  Single<String> getUsernameFromCache();
+
   Completable saveAuth(AuthModel authModel);
 
   Completable clear();
-
 }

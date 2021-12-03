@@ -26,6 +26,14 @@ public class LoginDataRepository implements LoginRepository {
         .flatMapSingle(authModel -> saveAuth(authModel).toSingle(() -> authModel));
   }
 
+  @Override public Single<Boolean> saveUsernameToCache(String username) {
+    return factory.getCrewCacheDataStore().saveUsernameToCache(username).toSingle(() -> true);
+  }
+
+  @Override public Single<String> getUsernameFromCache() {
+    return factory.getCrewCacheDataStore().getUsernameFromCache();
+  }
+
   @Override
   public Completable saveAuth(AuthModel authModel) {
     return factory.getCrewCacheDataStore().saveAuth(authModel);
