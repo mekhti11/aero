@@ -78,6 +78,7 @@
           >
 
         <com.google.android.material.textfield.TextInputLayout
+            android:visibility="gone"
             android:id="@+id/txt_input_company"
             style="@style/AppTextInputLayoutStyle"
             android:layout_marginTop="@dimen/spacing_sxlarge"

@@ -126,7 +126,7 @@ public class LoginActivity extends BaseActivity<LoginActivity> {
     request.setAirline("test");
     request.setUsername(twUsername.getText().toString());
     request.setPassword(twPassword.getText().toString());
-    request.setAirlineCode(adapter.getItem(dropDown.getPosition()).getAirlineCode());
+    request.setAirlineCode("AERO");
     loginUseCase.execute(new SingleObserver<AuthModel>() {
       @Override
       public void onSubscribe(Disposable d) {
