@@ -34,7 +34,7 @@ android {
     compileSdkVersion globalConfiguration["compileSdkVersion"]
     buildToolsVersion globalConfiguration["buildToolsVersion"]
     defaultConfig {
-        applicationId "com.hititcs.aoredcs"
+        applicationId "com.hititcs.aerodcs"
         minSdkVersion globalConfiguration["minSdkVersion"]
         targetSdkVersion globalConfiguration["targetSdkVersion"]
         versionCode verConsts["code"]
@@ -55,7 +55,7 @@ android {
             ext.enableCrashlytics = false
         }
         beta {
-            resValue "string", "app_name", "Crane DCS Beta"
+            resValue "string", "app_name", "Aero DCS Beta"
             buildConfigField "String", "API_BASE_URL", debugUrl
             applicationIdSuffix ""
             versionNameSuffix "-beta"
@@ -81,13 +81,13 @@ android {
 
     flavorDimensions "default"
     productFlavors {
-        bhs {
-            applicationId "com.hititcs.aerodcs"
-            signingConfig signingConfigs.boardingProd
-        }
-        others {
-
-        }
+//        bhs {
+//            applicationId "com.hititcs.aerodcs"
+//            signingConfig signingConfigs.boardingProd
+//        }
+//        others {
+//
+//        }
     }
 
 
