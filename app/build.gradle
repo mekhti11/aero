@@ -34,7 +34,7 @@ android {
     compileSdkVersion globalConfiguration["compileSdkVersion"]
     buildToolsVersion globalConfiguration["buildToolsVersion"]
     defaultConfig {
-        applicationId "com.hititcs.boarding"
+        applicationId "com.hititcs.aoredcs"
         minSdkVersion globalConfiguration["minSdkVersion"]
         targetSdkVersion globalConfiguration["targetSdkVersion"]
         versionCode verConsts["code"]
@@ -82,7 +82,7 @@ android {
     flavorDimensions "default"
     productFlavors {
         bhs {
-            applicationId "com.hititcs.boarding.bahamas"
+            applicationId "com.hititcs.aerodcs"
             signingConfig signingConfigs.boardingProd
         }
         others {
