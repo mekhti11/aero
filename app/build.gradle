@@ -34,7 +34,7 @@ android {
     compileSdkVersion globalConfiguration["compileSdkVersion"]
     buildToolsVersion globalConfiguration["buildToolsVersion"]
     defaultConfig {
-        applicationId "com.hititcs.aerodcs"
+        applicationId "com.hititcs.boarding"
         minSdkVersion globalConfiguration["minSdkVersion"]
         targetSdkVersion globalConfiguration["targetSdkVersion"]
         versionCode verConsts["code"]
@@ -50,14 +50,14 @@ android {
             debuggable true
             minifyEnabled false
             shrinkResources false
-            applicationIdSuffix ""
+            applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
             ext.enableCrashlytics = false
         }
         beta {
-            resValue "string", "app_name", "Aero DCS Beta"
+            resValue "string", "app_name", "Crane DCS Beta"
             buildConfigField "String", "API_BASE_URL", debugUrl
-            applicationIdSuffix ""
+            applicationIdSuffix ".debug"
             versionNameSuffix "-beta"
             debuggable true
             signingConfig signingConfigs.boardingBeta
@@ -81,13 +81,13 @@ android {
 
     flavorDimensions "default"
     productFlavors {
-//        bhs {
-//            applicationId "com.hititcs.aerodcs"
-//            signingConfig signingConfigs.boardingProd
-//        }
-//        others {
-//
-//        }
+        bhs {
+            applicationId "com.hititcs.boarding.bahamas"
+            signingConfig signingConfigs.boardingProd
+        }
+        others {
+
+        }
     }
 
 
@@ -143,5 +143,5 @@ dependencies {
 apply plugin: "com.google.gms.google-services"
 apply plugin: 'kotlin-android'
 repositories {
-  mavenCentral()
+    mavenCentral()
 }

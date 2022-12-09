@@ -139,6 +139,8 @@ public class LoginActivity extends BaseActivity<LoginActivity> {
         final ViewGroup viewGroup = (ViewGroup) ((ViewGroup) findViewById(android.R.id.content))
             .getChildAt(0);
         AppUtils.hideKeyboardFrom(context(), viewGroup);
+        hideProgressDialog();
+        jump();
         downloadCompanyLogoFromStorage();
       }
 
@@ -241,8 +243,7 @@ public class LoginActivity extends BaseActivity<LoginActivity> {
 
       @Override
       public void onSuccess(Boolean data) {
-        hideProgressDialog();
-        jump();
+
       }
 
       @Override
