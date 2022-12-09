@@ -112,7 +112,7 @@ public class LoginActivity extends BaseActivity<LoginActivity> {
   }
 
   private boolean validate() {
-    return dropDown.getPosition() >= 0 && !StringUtils.isEmpty(twUsername.getText().toString())
+    return !StringUtils.isEmpty(twUsername.getText().toString())
         && !StringUtils.isEmpty(twPassword.getText().toString());
   }
 
