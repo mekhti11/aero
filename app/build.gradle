@@ -85,8 +85,9 @@ android {
             applicationId "com.hititcs.boarding.bahamas"
             signingConfig signingConfigs.boardingProd
         }
-        others {
-
+        aero {
+            applicationId "com.hititcs.boarding"
+            signingConfig signingConfigs.boardingProd
         }
     }
 

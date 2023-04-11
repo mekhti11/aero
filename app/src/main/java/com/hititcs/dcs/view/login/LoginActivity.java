@@ -123,7 +123,7 @@ public class LoginActivity extends BaseActivity<LoginActivity> {
     }
     this.showProgressDialog();
     LoginRequest request = new LoginRequest();
-    request.setAirline("test");
+//    request.setAirline("test");
     request.setUsername(twUsername.getText().toString());
     request.setPassword(twPassword.getText().toString());
     request.setAirlineCode("AERO");
