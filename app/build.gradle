@@ -50,14 +50,12 @@ android {
             debuggable true
             minifyEnabled false
             shrinkResources false
-            applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
             ext.enableCrashlytics = false
         }
         beta {
             resValue "string", "app_name", "Crane DCS Beta"
             buildConfigField "String", "API_BASE_URL", debugUrl
-            applicationIdSuffix ".debug"
             versionNameSuffix "-beta"
             debuggable true
             signingConfig signingConfigs.boardingBeta
@@ -86,7 +84,7 @@ android {
             signingConfig signingConfigs.boardingProd
         }
         aero {
-            applicationId "com.hititcs.boarding"
+            applicationId "com.hititcs.boarding.aero"
             signingConfig signingConfigs.boardingProd
         }
     }

@@ -25,8 +25,8 @@ public class DcsApplication extends DaggerApplication {
   public void onCreate() {
     super.onCreate();
     AndroidThreeTen.init(this);
-    Stetho.initializeWithDefaults(this);
     if (BuildConfig.BUILD_TYPE.equalsIgnoreCase("debug")) {
+      Stetho.initializeWithDefaults(this);
       Timber.plant(new Timber.DebugTree());
       FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(false);
     }

@@ -44,6 +44,42 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:324302510707:android:3d4db43f850876777da806",
+        "android_client_info": {
+          "package_name": "com.hititcs.boarding.aero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324302510707-fg238td4aohofvidsf3d76gjsf0li4il.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUYkpd4VhgHGvmBP58J_GxbvIUcD0D6bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324302510707-fg238td4aohofvidsf3d76gjsf0li4il.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "324302510707-g189qkdms532fmjkl97hljhtanh1dldu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.boarding-dcs-global.prod"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:324302510707:android:8e5931ee0c9588b67da806",
         "android_client_info": {
           "package_name": "com.hititcs.boarding.bahamas"
@@ -155,6 +191,78 @@
         "mobilesdk_app_id": "1:324302510707:android:e0ba47376bf94fe57da806",
         "android_client_info": {
           "package_name": "com.hititcs.boarding.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324302510707-fg238td4aohofvidsf3d76gjsf0li4il.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUYkpd4VhgHGvmBP58J_GxbvIUcD0D6bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324302510707-fg238td4aohofvidsf3d76gjsf0li4il.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "324302510707-g189qkdms532fmjkl97hljhtanh1dldu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.boarding-dcs-global.prod"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324302510707:android:0a85c2aab16cecf17da806",
+        "android_client_info": {
+          "package_name": "com.hititcs.boarding.winair.beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324302510707-fg238td4aohofvidsf3d76gjsf0li4il.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUYkpd4VhgHGvmBP58J_GxbvIUcD0D6bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324302510707-fg238td4aohofvidsf3d76gjsf0li4il.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "324302510707-g189qkdms532fmjkl97hljhtanh1dldu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.boarding-dcs-global.prod"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324302510707:android:57b2604cf205756b7da806",
+        "android_client_info": {
+          "package_name": "com.hititcs.boarding.winair.release"
         }
       },
       "oauth_client": [
